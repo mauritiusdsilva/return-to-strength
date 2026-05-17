@@ -864,15 +864,15 @@ button {
    Carousel controls
    ============================================================ */
 
-.carousel-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 17px 20px 0;
-  max-width: 720px;
-  margin: 0 auto;
-}
+   .carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 20px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
 
 .carousel-nav {
   width: 50px;
@@ -1443,29 +1443,21 @@ button {
    Responsive
    ============================================================ */
 
-@media (min-width: 560px) {
-  .day-grid {
-    grid-template-columns: 1fr 1fr;
+   @media (min-width: 560px) {
+    .day-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .home-header h1 {
+      max-width: 13ch;
+    }
   }
-
-  .ex-card {
-    flex: 0 0 480px;
+  
+  @media (min-width: 760px) {
+    body {
+      font-size: 15.5px;
+    }
   }
-
-  .home-header h1 {
-    max-width: 13ch;
-  }
-}
-
-@media (min-width: 760px) {
-  body {
-    font-size: 15.5px;
-  }
-
-  .ex-card {
-    flex: 0 0 520px;
-  }
-}
 
 @media (max-width: 420px) {
   .container {
@@ -1571,5 +1563,81 @@ button {
 
   .day-topbar-title {
     font-size: 15px;
+  }
+}
+
+
+.ex-card {
+  flex: 0 0 calc(100% - 40px);
+}
+
+
+/* ============================================================
+   Desktop workout layout alignment
+   ============================================================ */
+
+   @media (min-width: 760px) {
+    #dayContent {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  
+    .day-meta-row,
+    .carousel-controls {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .warmup-panel,
+    .optional-core,
+    .cardio-screen {
+      width: calc(100% - 40px);
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .carousel-wrap {
+      width: 100%;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .carousel {
+      width: 100%;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 4px 20px 34px;
+    }
+  
+    .ex-card {
+      flex: 0 0 calc(100% - 40px);
+      max-width: none;
+    }
+  
+    .carousel-controls {
+      padding-top: 0;
+    }
+  }
+
+  /* ============================================================
+   Desktop bottom sheet width
+   ============================================================ */
+
+@media (min-width: 760px) {
+  .sheet {
+    left: 50%;
+    right: auto;
+    width: min(720px, calc(100% - 40px));
+    transform: translate(-50%, 100%);
+    border-radius: 32px 32px 0 0;
+  }
+
+  .sheet.open {
+    transform: translate(-50%, 0);
   }
 }

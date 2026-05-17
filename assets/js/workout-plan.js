@@ -291,8 +291,8 @@
       type: 'rest',
       icon: SVG.restIcon,
       rest: {
-        title: 'Rest',
-        copy: 'Take the day off. An easy casual walk is fine if she wants to move, but nothing is required.'
+        title: 'Rest day',
+        copy: 'Take the day off. An easy casual walk is fine if you feel like moving, but nothing is required.'
       }
     }
   ];
